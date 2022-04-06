@@ -1,0 +1,548 @@
+@preamble{ "\newcommand{\noopsort}[1]{} "
+	# "\newcommand{\printfirst}[2]{#1} "
+	# "\newcommand{\singleletter}[1]{#1} "
+	# "\newcommand{\switchargs}[2]{#2#1} " }
+
+@ARTICLE{article-minimal,
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+}
+
+@ARTICLE{article-full,
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   pages = "73+",
+   month = jul,
+   note = "This is a full ARTICLE entry",
+}
+
+The KEY field is here to override the KEY field in the journal being
+cross referenced (so is the NOTE field, in addition to its imparting
+information).
+
+@ARTICLE{article-crossref,
+   crossref = {WHOLE-JOURNAL},
+   key = "",
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   pages = "73+",
+   note = "This is a cross-referencing ARTICLE entry",
+}
+
+@ARTICLE{whole-journal,
+   key = "GAJ",
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   month = jul,
+   note = {The entire issue is devoted to gnats and gnus
+		(this entry is a cross-referenced ARTICLE (journal))},
+}
+
+@INBOOK{inbook-minimal,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973b}}1973",
+   chapter = "1.2",
+}
+
+@INBOOK{inbook-full,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   volume = 1,
+   series = "The Art of Computer Programming",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Second",
+   month = "10~" # jan,
+   year = "{\noopsort{1973b}}1973",
+   type = "Section",
+   chapter = "1.2",
+   pages = "10--119",
+   note = "This is a full INBOOK entry",
+}
+
+@INBOOK{inbook-crossref,
+   crossref = "whole-set",
+   title = "Fundamental Algorithms",
+   volume = 1,
+   series = "The Art of Computer Programming",
+   edition = "Second",
+   year = "{\noopsort{1973b}}1973",
+   type = "Section",
+   chapter = "1.2",
+   note = "This is a cross-referencing INBOOK entry",
+}
+
+@BOOK{book-minimal,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973c}}1981",
+}
+
+@BOOK{book-full,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   volume = 2,
+   series = "The Art of Computer Programming",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Second",
+   month = "10~" # jan,
+   year = "{\noopsort{1973c}}1981",
+   note = "This is a full BOOK entry",
+}
+
+@BOOK{book-crossref,
+   crossref = "whole-set",
+   title = "Seminumerical Algorithms",
+   volume = 2,
+   series = "The Art of Computer Programming",
+   edition = "Second",
+   year = "{\noopsort{1973c}}1981",
+   note = "This is a cross-referencing BOOK entry",
+}
+
+@BOOK{whole-set,
+   author = "Donald E. Knuth",
+   publisher = "Addison-Wesley",
+   title = "The Art of Computer Programming",
+   series = "Four volumes",
+   year = "{\noopsort{1973a}}{\switchargs{--90}{1968}}",
+   note = "Seven volumes planned (this is a cross-referenced set of BOOKs)",
+}
+
+@BOOKLET{booklet-minimal,
+   key = "Kn{\printfirst{v}{1987}}",
+   title = "The Programming of Computer Art",
+}
+
+@BOOKLET{booklet-full,
+   author = "Jill C. Knvth",
+   title = "The Programming of Computer Art",
+   howpublished = "Vernier Art Center",
+   address = "Stanford, California",
+   month = feb,
+   year = 1988,
+   note = "This is a full BOOKLET entry",
+}
+
+@INCOLLECTION{incollection-minimal,
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   publisher = "Academic Press",
+   year = 1977,
+}
+
+@INCOLLECTION{incollection-full,
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   editor = "David J. Lipcoll and D. H. Lawrie and A. H. Sameh",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   number = 23,
+   series = "Fast Computers",
+   chapter = 3,
+   type = "Part",
+   pages = "179--183",
+   publisher = "Academic Press",
+   address = "New York",
+   edition = "Third",
+   month = sep,
+   year = 1977,
+   note = "This is a full INCOLLECTION entry",
+}
+
+@INCOLLECTION{incollection-crossref,
+   crossref = "whole-collection",
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   pages = "179--183",
+   note = "This is a cross-referencing INCOLLECTION entry",
+}
+
+@BOOK{whole-collection,
+   editor = "David J. Lipcoll and D. H. Lawrie and A. H. Sameh",
+   title = "High Speed Computer and Algorithm Organization",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   number = 23,
+   series = "Fast Computers",
+   publisher = "Academic Press",
+   address = "New York",
+   edition = "Third",
+   month = sep,
+   year = 1977,
+   note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+@MANUAL{manual-minimal,
+   key = "Manmaker",
+   title = "The Definitive Computer Manual",
+}
+
+@MANUAL{manual-full,
+   author = "Larry Manmaker",
+   title = "The Definitive Computer Manual",
+   organization = "Chips-R-Us",
+   address = "Silicon Valley",
+   edition = "Silver",
+   month = apr # "-" # may,
+   year = 1986,
+   note = "This is a full MANUAL entry",
+}
+
+@MASTERSTHESIS{mastersthesis-minimal,
+   author = "{\'{E}}douard Masterly",
+   title = "Mastering Thesis Writing",
+   school = "Stanford University",
+   year = 1988,
+}
+
+@MASTERSTHESIS{mastersthesis-full,
+   author = "{\'{E}}douard Masterly",
+   title = "Mastering Thesis Writing",
+   school = "Stanford University",
+   type = "Master's project",
+   address = "English Department",
+   month = jun # "-" # aug,
+   year = 1988,
+   note = "This is a full MASTERSTHESIS entry",
+}
+
+@MISC{misc-minimal,
+   key = "Missilany",
+   note = "This is a minimal MISC entry",
+}
+
+@MISC{misc-full,
+   author = "Joe-Bob Missilany",
+   title = "Handing out random pamphlets in airports",
+   howpublished = "Handed out at O'Hare",
+   month = oct,
+   year = 1984,
+   note = "This is a full MISC entry",
+}
+
+@STRING{STOC-key = "OX{\singleletter{stoc}}"}
+
+@STRING{ACM = "The OX Association for Computing Machinery"}
+
+@STRING{STOC = " Symposium on the Theory of Computing"}
+
+@INPROCEEDINGS{inproceedings-minimal,
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   year = 1983,
+}
+
+@INPROCEEDINGS{inproceedings-full,
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   editor = "Wizard V. Oz and Mihalis Yannakakis",
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   number = 17,
+   series = "All ACM Conferences",
+   pages = "133--139",
+   month = mar,
+   year = 1983,
+   address = "Boston",
+   organization = ACM,
+   publisher = "Academic Press",
+   note = "This is a full INPROCEDINGS entry",
+}
+
+@INPROCEEDINGS{inproceedings-crossref,
+   crossref = "whole-proceedings",
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   organization = "",
+   pages = "133--139",
+   note = "This is a cross-referencing INPROCEEDINGS entry",
+}
+
+@PROCEEDINGS{proceedings-minimal,
+   key = STOC-key,
+   title = "Proc. Fifteenth Annual" # STOC,
+   year = 1983,
+}
+
+@PROCEEDINGS{proceedings-full,
+   editor = "Wizard V. Oz and Mihalis Yannakakis",
+   title = "Proc. Fifteenth Annual" # STOC,
+   number = 17,
+   series = "All ACM Conferences",
+   month = mar,
+   year = 1983,
+   address = "Boston",
+   organization = ACM,
+   publisher = "Academic Press",
+   note = "This is a full PROCEEDINGS entry",
+}
+
+@PROCEEDINGS{whole-proceedings,
+   key = STOC-key,
+   organization = ACM,
+   title = "Proc. Fifteenth Annual" # STOC,
+   address = "Boston",
+   year = 1983,
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   note = "This is a cross-referenced PROCEEDINGS",
+}
+
+@PHDTHESIS{phdthesis-minimal,
+   author = "F. Phidias Phony-Baloney",
+   title = "Fighting Fire with Fire: Festooning {F}rench Phrases",
+   school = "Fanstord University",
+   year = 1988,
+}
+
+@PHDTHESIS{phdthesis-full,
+   author = "F. Phidias Phony-Baloney",
+   title = "Fighting Fire with Fire: Festooning {F}rench Phrases",
+   school = "Fanstord University",
+   type = "{PhD} Dissertation",
+   address = "Department of French",
+   month = jun # "-" # aug,
+   year = 1988,
+   note = "This is a full PHDTHESIS entry",
+}
+
+@TECHREPORT{techreport-minimal,
+   author = "Tom Terrific",
+   title = "An {$O(n \log n / \! \log\log n)$} Sorting Algorithm",
+   institution = "Fanstord University",
+   year = 1988,
+}
+
+@TECHREPORT{techreport-full,
+   author = "Tom T{\'{e}}rrific",
+   title = "An {$O(n \log n / \! \log\log n)$} Sorting Algorithm",
+   institution = "Fanstord University",
+   type = "Wishful Research Result",
+   number = "7",
+   address = "Computer Science Department, Fanstord, California",
+   month = oct,
+   year = 1988,
+   note = "This is a full TECHREPORT entry",
+}
+
+@UNPUBLISHED{unpublished-minimal,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Lower Bounds for Wishful Research Results",
+   note = "Talk at Fanstord University (this is a minimal UNPUBLISHED entry)",
+}
+
+@UNPUBLISHED{unpublished-full,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Lower Bounds for Wishful Research Results",
+   month = nov # ", " # dec,
+   year = 1988,
+   note = "Talk at Fanstord University (this is a full UNPUBLISHED entry)",
+}
+
+@MISC{random-note-crossref,
+   key = {Volume-2},
+   note = "Volume~2 is listed under Knuth \cite{book-full}"
+}
+
+
+
+
+@article{wang2018supervised,
+  title={Supervised speech separation based on deep learning: An overview},
+  author={Wang, DeLiang and Chen, Jitong},
+  journal={IEEE/ACM Transactions on Audio, Speech, and Language Processing},
+  volume={26},
+  number={10},
+  pages={1702--1726},
+  year={2018},
+}
+
+@book{smith2011spectral,
+  title={Spectral audio signal processing},
+  author={Smith, Julius Orion},
+  year={2011},
+  publisher={W3K}
+}
+
+
+@inproceedings{hershey2016deep,
+  title={Deep clustering: Discriminative embeddings for segmentation and separation},
+  author={Hershey, John R and Chen, Zhuo and Le Roux, Jonathan and Watanabe, Shinji},
+  booktitle={2016 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={31--35},
+  year={2016},
+  organization={IEEE}
+}
+
+
+@book{opensourceseparation:book,
+	Author = {Ethan Manilow and Prem Seetharman and Justin Salamon},
+	Month = {Oct.},
+	Publisher = {https://source-separation.github.io/tutorial},
+	Title = {Open Source Tools \& Data for Music Source Separation},
+	Year = {2020},
+	Url = {https://source-separation.github.io/tutorial}
+}https://www.overleaf.com/project/6078a0c7a8b229ee052b8c64
+
+@article{Hershey_2016,
+   title={Deep clustering: Discriminative embeddings for segmentation and separation},
+   ISBN={9781479999880},
+   url={http://dx.doi.org/10.1109/ICASSP.2016.7471631},
+   DOI={10.1109/icassp.2016.7471631},
+   journal={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+   publisher={IEEE},
+   author={Hershey, John R. and Chen, Zhuo and Le Roux, Jonathan and Watanabe, Shinji},
+   year={2016},
+}
+@article{griffin1984signal,
+  title={Signal estimation from modified short-time Fourier transform},
+  author={Griffin, Daniel and Lim, Jae},
+  journal={IEEE Transactions on acoustics, speech, and signal processing},
+  volume={32},
+  number={2},
+  pages={236--243},
+  year={1984},
+  publisher={IEEE}
+}
+
+@article{vincent2006performance,
+  title={Performance measurement in blind audio source separation},
+  author={Vincent, Emmanuel and Gribonval, R{\'e}mi and F{\'e}votte, C{\'e}dric},
+  journal={IEEE transactions on audio, speech, and language processing},
+  volume={14},
+  number={4},
+  pages={1462--1469},
+  year={2006},
+  publisher={IEEE}
+}
+
+@inproceedings{le2019sdr,
+  title={SDR--half-baked or well done?},
+  author={Le Roux, Jonathan and Wisdom, Scott and Erdogan, Hakan and Hershey, John R},
+  booktitle={ICASSP 2019-2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={626--630},
+  year={2019},
+  organization={IEEE}
+}
+
+
+@article{luo2019conv,
+  title={Conv-tasnet: Surpassing ideal time--frequency magnitude masking for speech separation},
+  author={Luo, Yi and Mesgarani, Nima},
+  journal={IEEE/ACM transactions on audio, speech, and language processing},
+  volume={27},
+  number={8},
+  pages={1256--1266},
+  year={2019},
+  publisher={IEEE}
+}
+
+@article{macwhinney2010transcribing,
+  title={Transcribing, searching and data sharing: The CLAN software and the TalkBank data repository},
+  author={MacWhinney, Brian and Wagner, Johannes},
+  journal={Gesprachsforschung: Online-Zeitschrift zur verbalen Interaktion},
+  volume={11},
+  pages={154},
+  year={2010},
+  publisher={NIH Public Access}
+}
+
+
+@incollection{macwhinney2007talkbank,
+  title={The talkbank project},
+  author={MacWhinney, Brian},
+  booktitle={Creating and digitizing language corpora},
+  pages={163--180},
+  year={2007},
+  publisher={Springer}
+}
+
+
+
+@article{baevski2020wav2vec,
+  title={wav2vec 2.0: A framework for self-supervised learning of speech representations},
+  author={Baevski, Alexei and Zhou, Henry and Mohamed, Abdelrahman and Auli, Michael},
+  journal={arXiv preprint arXiv:2006.11477},
+  year={2020}
+}
+
+
+@inproceedings{Bredin2020,
+  Title = {{pyannote.audio: neural building blocks for speaker diarization}},
+  Author = {{Bredin}, Herv{\'e} and {Yin}, Ruiqing and {Coria}, Juan Manuel and {Gelly}, Gregory and {Korshunov}, Pavel and {Lavechin}, Marvin and {Fustes}, Diego and {Titeux}, Hadrien and {Bouaziz}, Wassim and {Gill}, Marie-Philippe},
+  Booktitle = {ICASSP 2020, IEEE International Conference on Acoustics, Speech, and Signal Processing},
+  Address = {Barcelona, Spain},
+  Month = {May},
+  Year = {2020},
+}
+
+@inproceedings{ravanelli2018speaker,
+  title={Speaker recognition from raw waveform with sincnet},
+  author={Ravanelli, Mirco and Bengio, Yoshua},
+  booktitle={2018 IEEE Spoken Language Technology Workshop (SLT)},
+  pages={1021--1028},
+  year={2018},
+  organization={IEEE}
+}
+
+
+@inproceedings{snyder2018x,
+  title={X-vectors: Robust dnn embeddings for speaker recognition},
+  author={Snyder, David and Garcia-Romero, Daniel and Sell, Gregory and Povey, Daniel and Khudanpur, Sanjeev},
+  booktitle={2018 IEEE international conference on acoustics, speech and signal processing (ICASSP)},
+  pages={5329--5333},
+  year={2018},
+  organization={IEEE}
+}
+
+
+@inproceedings{Coria2020,
+    author="Coria, Juan M. and Bredin, Herv{\'e} and Ghannay, Sahar and Rosset, Sophie",
+    editor="Espinosa-Anke, Luis and Mart{\'i}n-Vide, Carlos and Spasi{\'{c}}, Irena",
+    title="{A Comparison of Metric Learning Loss Functions for End-To-End Speaker Verification}",
+    booktitle="Statistical Language and Speech Processing",
+    year="2020",
+    publisher="Springer International Publishing",
+    pages="137--148",
+    isbn="978-3-030-59430-5"
+}
+
+
+@inproceedings{subakan2021attention,
+  title={Attention is all you need in speech separation},
+  author={Subakan, Cem and Ravanelli, Mirco and Cornell, Samuele and Bronzi, Mirko and Zhong, Jianyuan},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={21--25},
+  year={2021},
+  organization={IEEE}
+}
+
+@inproceedings{luo2020dual,
+  title={Dual-path rnn: efficient long sequence modeling for time-domain single-channel speech separation},
+  author={Luo, Yi and Chen, Zhuo and Yoshioka, Takuya},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={46--50},
+  year={2020},
+  organization={IEEE}
+}
+
+@inproceedings{bai2017applications,
+  title={Applications of deep learning in supervised speech separation},
+  author={Bai, Shuangran and Liu, Yungang and Zhang, Ting and Li, Fengzhong},
+  booktitle={2017 Chinese Automation Congress (CAC)},
+  pages={6539--6544},
+  year={2017},
+  organization={IEEE}
+}
+
